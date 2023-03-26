@@ -4,7 +4,7 @@
 
 *-Despues vamos a generar un entorno virtual 
 python -m venv venv
-
+python
 *Despues instalamos nuestro paquete dnd esta django
 pip install django
 
@@ -37,6 +37,13 @@ con este git push se guarda todo en el repositorio de git hub.
 * Vamos a modificar o agregar la url de nuestro proyecto django para eso
 entramos a la carpeta proyecto django ---<>urls.py , y dentro de la misma al diccionario urlpattern , con la palabra reservada path creamos nuestra nueva url.
 
+from PROYECTO_DJANGO.views import mi_vista
+
+urlpatterns = [
+    path("" , mi_vista),
+    path('admin/', admin.site.urls),
+]
+
 * Para hacerlo mejor cree una carpeta views.py y dentro una funcion
 def mi_vista(request):
 return ..
@@ -46,4 +53,11 @@ from django.http import HttpResponse
 
 *una vez importado nuestra funcion mi_vista podemos completarla con etiquetas str(strings)
 
-* ejemplo de etiquetea <h1 ></h1> se usa para resaltar texto
+* ejemplo de etiquetea <h1 ></h1> se usa para resaltar texto.
+
+**IMPORTANTE SI VOS CERRAR EL RUNSERVER , VAS A TENER Q DESACTIVAR EL VENV Y VOVLER A ACTIVARLO PARA CORRER EL MANAGE.PY RUNSERVER DE NUEVO.
+
+Antes tenes que cerrar la termjnal en la q estaban trabajnado  abrir una nueva
+
+
+*Los templeis me permiten escribir varias cosas sin que sea un choclo
